@@ -49,19 +49,19 @@ variable you have to delete it. It is safe to be deleted between program runs.
 
 We list the python libraries used along with the websites to learn more about them:
 
-1.- vectorBT - https://vectorbt.dev/
-2.- Pandas - https://pandas.pydata.org/
-3.- Yahoo Finance for python - https://pypi.org/project/yfinance/
-4.- Alpaca for python - https://alpaca.markets/sdks/python/
-5.- business-calendar - https://pypi.org/project/business-python/
-6.- colorama - https://pypi.org/project/colorama/
+<p>1.- vectorBT - https://vectorbt.dev/</p>
+<p>2.- Pandas - https://pandas.pydata.org/</p>
+<p>3.- Yahoo Finance for python - https://pypi.org/project/yfinance/</p>
+<p>4.- Alpaca for python - https://alpaca.markets/sdks/python/</p>
+<p>5.- business-calendar - https://pypi.org/project/business-python/</p>
+<p>6.- colorama - https://pypi.org/project/colorama/</p>
 
 ## 5.- Assumptions.
 
 The program has been written and tested on a Linux box. If we try to run it
 on other operating systems we may need to adapt PATH-like variables as for example:
 
-DataDir = './data/'
+<p>DataDir = './data/'</p>
 
-placed on the module 'modules/Collect.py'.
+<p>placed on the module 'modules/Collect.py'.</p>
 
