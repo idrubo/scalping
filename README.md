@@ -19,7 +19,7 @@ You can pass to it 'ST_MOMENTUM' or 'ST_RANGING' as strategies, those are symbol
 The strategies themselves are defined on that module, too.
 
 You can select a data provider by passing 'Alpaca' or 'YF' to 'setProvider', on the main section of the program.
-Pleas note that if you choose Alpaca, you have to set 'ALPACA_API_KEY' and 'ALPACA_SECRET_KEY' on the module 'modules/Credentials.py',
+Please note that if you choose Alpaca, you have to set 'ALPACA_API_KEY' and 'ALPACA_SECRET_KEY' on the module 'modules/Credentials.py',
 with valid keys. 'YF' represents 'Yahoo Finance' python API.
 
 After running the backtest it shows a brief summary with 'PnL' and mathematical expectancy, for every day.
