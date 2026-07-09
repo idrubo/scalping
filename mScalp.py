@@ -1,4 +1,5 @@
-#!/home/cms/Business/Trading/bots/venv/bin/python
+
+# Copyright (c) 2026 Lluis Sala Masdemont. All Rights Reserved.
 
 '''
 To implement scalping strategies.
@@ -61,15 +62,6 @@ def runBT (strategy, symbols, target):
 # Main:
 #
 
-# DBG # DBG # DBG
-# 
-# Pending:
-#
-# 1.- Refine the strategy for ranging makets.       ->
-# 2.- Develop an strategy for volume.               ->
-# 
-# DBG # DBG # DBG
-
 # Portfolio initial capital. You can set 'capital' from the file 'config.py'.
 # If you delete that file a value of $100,000 is taken as 'capital'.
 initialC = capital
@@ -90,8 +82,8 @@ sLoss = 0.01 # 1%
 
 # Choose a target date range and the stocks to trade.
 # Start and end dates to backtest. Both dates will be backtested.
-first = '2026-05-11'
-last  = '2026-05-15'
+first = '2026-06-01'
+last  = '2026-06-05'
 
 # Make sure we have selected proper business days.
 if (not isBusiness (first) or (not isBusiness (last))):

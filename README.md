@@ -1,6 +1,8 @@
-Day Trading Backtesting Program:
+Copyright (c) 2026 Lluis Sala Masdemont. All Rights Reserved.
 
-1.- Introduction.
+# Day Trading backtesting program:
+
+## 1.- Introduction.
 It is a Python program to backtest historic trading data. It is focussed on day trading.
 It is able to test different strategies and to download ohlcv data from multiple providers.
 It can backtest a range of dates, like a week or a month, and simulate day trading operations,
@@ -10,11 +12,11 @@ Below there's a link to vectorBT.
 Please understand that day trading holds high risks. It can easily drive to financial losses.
 The program is NOT intended for live trading. It deals with historic data and backtesting ONLY.
 
-2.- Brief description.
-The core of the program is the function 'runBT'. It takes as parameters an strategy, a list of symbols and
-a 'target' date and it returns a vectorBT 'portfolio' with the results of backtesting.
-You can pass to it 'ST_MOMENTUM' or 'ST_RANGING' as strategies, those are symbolic constants defined on
-the module 'modules/Strategies.py'. The strategies themselves are defined on that module, too.
+## 2.- Brief description.
+The core of the program is the function 'runBT'. It takes as parameters an strategy,
+a list of symbols and a 'target' date and returns a vectorBT 'portfolio' with the results of backtesting.
+You can pass to it 'ST_MOMENTUM' or 'ST_RANGING' as strategies, those are symbolic constants defined on the module 'modules/Strategies.py'.
+The strategies themselves are defined on that module, too.
 
 You can select a data provider by passing 'Alpaca' or 'YF' to 'setProvider', on the main section of the program.
 Pleas note that if you choose Alpaca, you have to set 'ALPACA_API_KEY' and 'ALPACA_SECRET_KEY' on the module 'modules/Credentials.py',
@@ -25,7 +27,7 @@ After the dates range is run, it will show a brief summary with the same metrics
 If the variable 'btTest' is set to 'True' the function 'dbgPlot' will show a series of charts with the most traded symbol,
 its entry and exit points and the computed indicators. You can pass any symbol to 'dbgPlot', provided it has been traded.
 
-3.- Running.
+## 3.- Running.
 To run the program just update the variables 'first' and 'last' on the main section of 'mScalp.py'.
 This variables contain the first and last dates to be backtested.
 The variable 'symbols' contains a list of symbols that are most likely to move uptrending or ranging,
@@ -43,7 +45,7 @@ compute the summaries, it contains internal data. It can be safely deleted betwe
 The second one holds ohlcv data needed to compute the ADX indicator. If you change the 'symbols'
 variable you have to delete it. It is safe to be deleted between program runs.
 
-4.- Libraries used.
+## 4.- Libraries used.
 
 We list the python libraries used along with the websites to learn more about them:
 
@@ -54,7 +56,7 @@ We list the python libraries used along with the websites to learn more about th
 5.- business-calendar - https://pypi.org/project/business-python/
 6.- colorama - https://pypi.org/project/colorama/
 
-5.- Assumptions.
+## 5.- Assumptions.
 
 The program has been written and tested on a Linux box. If we try to run it
 on other operating systems we may need to adapt PATH-like variables as for example:
