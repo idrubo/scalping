@@ -9,7 +9,7 @@ from business.calendar import Calendar
 # Taken from: https://www.nyse.com/trade/hours-calendars
 
 # Holiday                                   2026                    2027                    2028
-# New Year’s Day                            Thursday, January 1     Friday, January 1       —
+# New Year's Day                            Thursday, January 1     Friday, January 1       —
 # Martin Luther King, Jr. Day               Monday, January 19      Monday, January 18      Monday, January 17
 # Washington's Birthday                     Monday, February 16     Monday, February 15     Monday, February 21
 # Good Friday                               Friday, April 3         Friday, March 26        Friday, April 14
@@ -71,7 +71,7 @@ NYSEcal = Calendar (holidays = Holidays)
 def isBusiness (date):
     try:
         ret = NYSEcal.is_business_day (date)
-    except:
+    except Exception:
         return False
 
     return ret
@@ -90,4 +90,3 @@ def nextBusiness (date):
 def addBusiness (date, n):
     changeDate = NYSEcal.add_business_days (date, n)
     return date + (changeDate - date.date ())
-
