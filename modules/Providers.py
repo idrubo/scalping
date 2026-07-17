@@ -59,12 +59,12 @@ def YFfetch (symbols, timeFrame, first, last):
     
         try:
             vbtOhlcv = vbt.YFData.download (symbols, interval = timeFrame, start = first, end = last)
-        except:
-            prnError ('Error dowloading data.')
+        except Exception as e:
+            prnError (f'Error downloading data: {e}')
             if i < 4: prnError ('Retrying ...')
         else:
             Success = True
-            prnSuccess ('SUCESS !!!')
+            prnSuccess ('SUCCESS !!!')
     
         i += 1
 
@@ -97,11 +97,11 @@ def AlpFetch (symbols, timeFrame, first, last):
 
         try:
             vbtOhlcv = AData.download (symbols, timeframe = timeFrame, start = first, end = last)
-        except:
-            prnError ('Error dowloading data.')
+        except Exception as e:
+            prnError (f'Error downloading data: {e}')
             if i < 4: prnError ('Retrying ...')
         else:
-            prnSuccess ('SUCESS !!!')
+            prnSuccess ('SUCCESS !!!')
             Success = True
 
         i += 1
@@ -109,7 +109,7 @@ def AlpFetch (symbols, timeFrame, first, last):
     # Just to drop unneeded data.
     ohlcv = prDrop (vbtOhlcv.get (), first, last)
 
-    prnSuccess ('SUCESS !!!')
+    prnSuccess ('SUCCESS !!!')
 
     return vbtOhlcv
 
@@ -133,11 +133,11 @@ def YFUpdate (end):
 
         try:
             modules.Collect.vbtOhlcv = modules.Collect.vbtOhlcv.update (end = end)
-        except:
-            prnError ('Error dowloading data.')
+        except Exception as e:
+            prnError (f'Error downloading data: {e}')
             if i < 4: prnError ('Retrying ...')
         else:
-            prnSuccess ('SUCESS !!!')
+            prnSuccess ('SUCCESS !!!')
             Success = True
 
         i += 1
@@ -152,11 +152,11 @@ def AlpUpdate (end):
 
         try:
             modules.Collect.vbtOhlcv = modules.Collect.vbtOhlcv.update (end = end)
-        except:
-            prnError ('Error dowloading data.')
+        except Exception as e:
+            prnError (f'Error downloading data: {e}')
             if i < 4: prnError ('Retrying ...')
         else:
-            prnSuccess ('SUCESS !!!')
+            prnSuccess ('SUCCESS !!!')
             Success = True
 
         i += 1
@@ -168,4 +168,3 @@ def AlpUpdate (end):
 
     # Just to drop unneeded data.
     prDrop (ohlcv, first, end)
-
