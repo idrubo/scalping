@@ -59,7 +59,7 @@ def YFfetch (symbols, timeFrame, first, last):
     
         try:
             vbtOhlcv = vbt.YFData.download (symbols, interval = timeFrame, start = first, end = last)
-        except:
+        except Exception:
             prnError ('Error dowloading data.')
             if i < 4: prnError ('Retrying ...')
         else:
@@ -97,7 +97,7 @@ def AlpFetch (symbols, timeFrame, first, last):
 
         try:
             vbtOhlcv = AData.download (symbols, timeframe = timeFrame, start = first, end = last)
-        except:
+        except Exception:
             prnError ('Error dowloading data.')
             if i < 4: prnError ('Retrying ...')
         else:
@@ -133,7 +133,7 @@ def YFUpdate (end):
 
         try:
             modules.Collect.vbtOhlcv = modules.Collect.vbtOhlcv.update (end = end)
-        except:
+        except Exception:
             prnError ('Error dowloading data.')
             if i < 4: prnError ('Retrying ...')
         else:
@@ -152,7 +152,7 @@ def AlpUpdate (end):
 
         try:
             modules.Collect.vbtOhlcv = modules.Collect.vbtOhlcv.update (end = end)
-        except:
+        except Exception:
             prnError ('Error dowloading data.')
             if i < 4: prnError ('Retrying ...')
         else:
