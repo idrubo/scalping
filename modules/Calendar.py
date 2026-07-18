@@ -71,7 +71,7 @@ NYSEcal = Calendar (holidays = Holidays)
 def isBusiness (date):
     try:
         ret = NYSEcal.is_business_day (date)
-    except:
+    except Exception:
         return False
 
     return ret
