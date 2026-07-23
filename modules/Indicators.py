@@ -247,7 +247,7 @@ def MACDfilters (point, slowPeriod, fastPeriod, sgnPeriod):
 
     return entryFilter, exitFilter
 
-# Stochastic Oscilator.
+# Stochastic Oscillator.
 def SOfilters (High, Low, Close, lower, upper):
 
     values = vbt.STOCH.run (High, Low, Close)

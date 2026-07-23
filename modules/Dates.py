@@ -125,9 +125,9 @@ def intDays (tf, n):
 def DSTactive (date):
 
     if (date.dst () == timedelta (0)):
-        return True
-    else:
         return False
+    else:
+        return True
 
 # Computes the time difference between a foreign time zone and that of the system.
 def TZdiff (foreignTZ, date):

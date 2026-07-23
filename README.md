@@ -25,11 +25,14 @@ with valid keys. 'YF' represents 'Yahoo Finance' python API.
 After running the backtest it shows a brief summary with 'PnL' and mathematical expectancy, for every day.
 After the dates range is run, it will show a brief summary with the same metrics and the remaining capital.
 If the variable 'btTest' is set to 'True' the function 'dbgPlot' will show a series of charts with the most traded symbol,
-its entry and exit points and the computed indicators. You can pass any symbol to 'dbgPlot', provided it has been traded.
+its entry and exit points and the computed indicators. We can pass any symbol to 'dbgPlot', provided it has been traded.
+Note that we will only print last traded day data. We could print any data we want by selecting a date and
+assigning 'first' and 'last' variables equal to that day as stated on the next section.
 
 ## 3.- Running.
 To run the program just update the variables 'first' and 'last' on the main section of 'mScalp.py'.
-This variables contain the first and last dates to be backtested.
+These variables contain the first and last dates to be backtested.
+If we were interested on a single day we could assign 'first' and 'last' equal to that specific date.
 The variable 'symbols' contains a list of symbols that are most likely to move uptrending or ranging,
 to test one of both strategies. You have to load it with any symbols read from an screener, for example.
 You could also wish to modify 'sLoss' and 'slot'.
@@ -49,19 +52,19 @@ variable you have to delete it. It is safe to be deleted between program runs.
 
 We list the python libraries used along with the websites to learn more about them:
 
-<p>1.- vectorBT - https://vectorbt.dev/</p>
-<p>2.- Pandas - https://pandas.pydata.org/</p>
-<p>3.- Yahoo Finance for python - https://pypi.org/project/yfinance/</p>
-<p>4.- Alpaca for python - https://alpaca.markets/sdks/python/</p>
-<p>5.- business-calendar - https://pypi.org/project/business-python/</p>
-<p>6.- colorama - https://pypi.org/project/colorama/</p>
+<p>1.- vectorBT - https://vectorbt.dev/<\p>
+<p>2.- Pandas - https://pandas.pydata.org/<\p>
+<p>3.- Yahoo Finance for python - https://pypi.org/project/yfinance/<\p>
+<p>4.- Alpaca for python - https://alpaca.markets/sdks/python/<\p>
+<p>5.- business-calendar - https://pypi.org/project/business-python/<\p>
+<p>6.- colorama - https://pypi.org/project/colorama/<\p>
 
 ## 5.- Assumptions.
 
 The program has been written and tested on a Linux box. If we try to run it
 on other operating systems we may need to adapt PATH-like variables as for example:
 
-<p>DataDir = './data/'</p>
+<p>DataDir = './data/'<\p>
 
-<p>placed on the module 'modules/Collect.py'.</p>
+<p>placed on the module 'modules/Collect.py'.<\p>
 

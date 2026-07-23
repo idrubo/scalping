@@ -13,7 +13,7 @@ from modules.Debug  import *
 # We can save any data provider credentials here.
 from modules.Credentials import *
 
-# Callables to general, abstract fucntions.
+# Callables to general, abstract functions.
 Download = None
 Update   = None
 Load     = None
@@ -60,11 +60,11 @@ def YFfetch (symbols, timeFrame, first, last):
         try:
             vbtOhlcv = vbt.YFData.download (symbols, interval = timeFrame, start = first, end = last)
         except:
-            prnError ('Error dowloading data.')
+            prnError ('Error downloading data.')
             if i < 4: prnError ('Retrying ...')
         else:
             Success = True
-            prnSuccess ('SUCESS !!!')
+            prnSuccess ('SUCCESS !!!')
     
         i += 1
 
@@ -91,25 +91,22 @@ def AlpFetch (symbols, timeFrame, first, last):
 
     prnMsg ('Downloading ...')
 
-
     Success = False; i = 0
     while ((not Success) and (i < 5)):
 
         try:
             vbtOhlcv = AData.download (symbols, timeframe = timeFrame, start = first, end = last)
         except:
-            prnError ('Error dowloading data.')
+            prnError ('Error downloading data.')
             if i < 4: prnError ('Retrying ...')
         else:
-            prnSuccess ('SUCESS !!!')
+            prnSuccess ('SUCCESS !!!')
             Success = True
 
         i += 1
 
     # Just to drop unneeded data.
     ohlcv = prDrop (vbtOhlcv.get (), first, last)
-
-    prnSuccess ('SUCESS !!!')
 
     return vbtOhlcv
 
@@ -134,10 +131,10 @@ def YFUpdate (end):
         try:
             modules.Collect.vbtOhlcv = modules.Collect.vbtOhlcv.update (end = end)
         except:
-            prnError ('Error dowloading data.')
+            prnError ('Error downloading data.')
             if i < 4: prnError ('Retrying ...')
         else:
-            prnSuccess ('SUCESS !!!')
+            prnSuccess ('SUCCESS !!!')
             Success = True
 
         i += 1
@@ -153,10 +150,10 @@ def AlpUpdate (end):
         try:
             modules.Collect.vbtOhlcv = modules.Collect.vbtOhlcv.update (end = end)
         except:
-            prnError ('Error dowloading data.')
+            prnError ('Error downloading data.')
             if i < 4: prnError ('Retrying ...')
         else:
-            prnSuccess ('SUCESS !!!')
+            prnSuccess ('SUCCESS !!!')
             Success = True
 
         i += 1

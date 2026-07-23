@@ -25,7 +25,7 @@ signalTF = '15m'
 # 
 # Signal Type   MACD Condition          RSI Condition
 # Buy           MACD above signal line  RSI crosses above 40
-# Sell          MACD below signal line  RSI crosses bellow 60
+# Sell          MACD below signal line  RSI crosses below 60
 #
 def stMomentum (price):
     
@@ -44,7 +44,7 @@ def stMomentum (price):
     start = price.index [0]
     end   = price.index [-1]
 
-    # We assume 'price' spans for three business days.
+    # We assume 'price' spans for 'dtLag' business days.
     actual = start + getDtLag ()
 
     # Close all positions at the end of the day.
@@ -71,8 +71,8 @@ def stMomentum (price):
 # Stochastic Oscillator -> Momentum
 # 
 # Signal Type   Pivot point Condition   Stoch. Osc. Condition
-# Buy           Price near support      SO crosses below 20
-# Sell          Price near resistance   SO crosses above 80
+# Buy           Price near support      SO crosses above 20
+# Sell          Price near resistance   SO crosses below 80
 #
 def stRanging (high, low, close):
 
@@ -91,7 +91,7 @@ def stRanging (high, low, close):
     start = close.index [0]
     end   = close.index [-1]
 
-    # We assume 'close' spans for three business days.
+    # We assume 'close' spans for 'dtLag' business days.
     actual = start + getDtLag ()
 
     # Close all positions at the end of the day.

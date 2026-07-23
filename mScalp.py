@@ -159,6 +159,7 @@ for tgt in tgtIdx:
 
     # Update 'capital' value to be used across daily sessions.
     capital = updtCapital (portfolio, capital)
+    size = capital * slot
 
 # A result summary for the whole date range.
 trades = loadTrades ()

@@ -1,5 +1,5 @@
 '''
- To run a portforlio and make some related computations.
+ To run a portfolio and make some related computations.
 '''
 
 import vectorbt as vbt

@@ -19,7 +19,7 @@ from vectorbt.utils.datetime_ import (
 #
 # 'df = df.droplevel ('symbol')'
 #
-# To eliminate aplaca's dataframe multiindex.
+# To eliminate alpaca's dataframe multiindex.
 # For the rest you should check vectorBT documentation at 'https://vectorbt.dev/'
 #
 class AData (Data):
